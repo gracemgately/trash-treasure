@@ -4,8 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "build-client-watch": "webpack -w",
+    "start-server": "NODE_ENV='development' nodemon server -e html,js,scss --ignore public",
+    "start-dev": "npm run build-client-watch & npm run start-server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7",
+    "shopify-buy": "^0.7.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
 }
