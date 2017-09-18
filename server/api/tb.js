@@ -6,8 +6,8 @@ module.exports = router;
 
 var shopClient = ShopifyBuy.buildClient({
   accessToken: API_KEY,
-  domain: 'ef4a17b9.ngrok.io',
-  appId: '6'
+  domain: NGROK_LOC,
+  appId: APP_ID
 });
 
 router.get('/', (req, res, next) => {
